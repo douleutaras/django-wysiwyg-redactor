@@ -4,7 +4,10 @@ try:
     from django.core.urlresolvers import reverse
 except ModuleNotFoundError:
     from django.urls import reverse
-from django.utils import simplejson as json
+try:
+    from django.utils import simplejson as json
+except ImportError:
+    import json
 from django.conf import settings
 
 
