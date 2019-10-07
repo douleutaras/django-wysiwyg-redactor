@@ -2,7 +2,7 @@ from django.forms import widgets
 from django.utils.safestring import mark_safe
 try:
     from django.core.urlresolvers import reverse
-except ImportError:
+except ModuleNotFoundError:
     from django.urls import reverse
 from django.utils import simplejson as json
 from django.conf import settings
